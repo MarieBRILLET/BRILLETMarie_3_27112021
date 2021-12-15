@@ -16,67 +16,79 @@
     <main>
         <section id="formulaire">
             <form method="post" action="index.html">
-                <label for="localisation"><i class="fas fa-map-marker-alt"></i></label>
-                <input type="search" name="lieux" id="localisation" value="Paris, Bellevile"/>
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button type="submit">Explorer nos restaurants</button>
+                <div class="bloc_form">
+                    <label for="localisation"><i class="fas fa-map-marker-alt"></i></label>
+                    <input type="search" name="lieux" id="localisation" value="Paris, Bellevile"/>
+                </div>
+                <div class="bloc_form_text">
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                    <button type="submit">Explorer nos restaurants</button>
+                </div>
             </form>
         </section><!--fin de la 1er section-->
 
-        <section>
+        <section id="fonctionnement">
             <h2>Fonctionnement</h2>
             <ol>
-                <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
-                <li><i class="fasa fa-store"></i>Dégustez au restaurant</li>
+                <li>
+                    <aside><p>1</p></aside>
+                    <i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                <li>
+                    <aside><p>2</p></aside>
+                    <i class="fas fa-list-ul"></i>Composez votre menu</li>
+                <li>
+                    <aside><p>3</p></aside>
+                    <i class="fas fa-store"></i>Dégustez au restaurant</li>
             </ol>
         </section><!--fin de la 2e section-->
 
-        <section>
+        <section id="restaurant">
             <h2>Restaurants</h2>
-            <article><!--1er card-->
-                <span>Nouveau</span>
-                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une assiette sur une table où des personnes sont installés"/>
-                <div>
-                    <div>
-                        <a href="la_palette_du_gout.html"><h3>La palette du goût</h3></a>
-                        <p>Ménilmontant</p>
+            <div class="bloc_restaurant">
+                <article class="card_restaurant"><!--1er card-->
+                    <span>Nouveau</span>
+                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une assiette sur une table où des personnes sont installés"/>
+                    <div class="rest_text">
+                        <div class="rest_subtext">
+                            <a href="la_palette_du_gout.html"><h3>La palette du goût</h3></a>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <a href="la_palette_du_gout.html"><i class="far fa-heart"></i></a>
                     </div>
-                    <a href="la_palette_du_gout.html"><i class="far fa-heart"></i></a>
-                </div>
-            </article>
-            <article><!--2e card-->
-                <span>Nouveau</span>
-                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'une assiette vue du dessus de la table"/>
-                <div>
-                    <div>
-                        <a href="la_note_enchantee.html"><h3>La note enchantée</h3></a>
-                     <p>Charonne</p>
+                </article>
+                <article class="card_restaurant"><!--2e card-->
+                    <span>Nouveau</span>
+                    <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo d'une assiette vue du dessus de la table"/>
+                    <div class="rest_text">
+                        <div class="rest_subtext">
+                            <a href="la_note_enchantee.html"><h3>La note enchantée</h3></a>
+                            <p>Charonne</p>
+                        </div>
+                        <a href="la_note_enchantee.html"><i class="far fa-heart"></i></a>
                     </div>
-                    <a href="la_note_enchantee.html"><i class="far fa-heart"></i></a>
-                </div>
-            </article>
-            <article><!--3e card-->
-                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'une assiette avec de la nourriture"/>
-                <div>
-                    <div>
-                        <a href="a_la_francaise.html"><h3>À la française</h3></a>
-                        <p>Cité Rouge</p>
+                </article>
+                <article class="card_restaurant"><!--3e card-->
+                    <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo d'une assiette avec de la nourriture"/>
+                    <div class="rest_text">
+                        <div class="rest_subtext">
+                            <a href="a_la_francaise.html"><h3>À la française</h3></a>
+                            <p>Cité Rouge</p>
+                        </div>
+                        <a href="a_la_francaise.html"><i class="fas fa-heart"></i></a>
                     </div>
-                    <a href="a_la_francaise.html"><i class="fas fa-heart"></i></a>
-                </div>
-            </article>
-            <article><!--4e card-->
-                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'une assiette rectangulaire dans un style asiatique"/>
-                <div>
-                    <div>
-                        <a href="le_delice_des_sens.html"><h3>Le délice des sens</h3></a>
-                        <p>Folie-Méricourt</p>
+                </article>
+                <article class="card_restaurant"><!--4e card-->
+                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo d'une assiette rectangulaire dans un style asiatique"/>
+                    <div class="rest_text">
+                        <div class="rest_subtext">
+                            <a href="le_delice_des_sens.html"><h3>Le délice des sens</h3></a>
+                            <p>Folie-Méricourt</p>
+                        </div>
+                        <a href="le_delice_des_sens.html"><i class="fas fa-heart"></i></a>
                     </div>
-                    <a href="le_delice_des_sens.html"><i class="fas fa-heart"></i></a>
-                </div>
-            </article>
+                </article>
+            </div>
         </section><!--fin de la dernier section-->
     </main>
 
