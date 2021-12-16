@@ -1,0 +1,9 @@
+button{
+    padding: 15px;
+    border: 0 solid transparent;
+    border-radius: 30px;
+    box-shadow: 5px 2px 5px lightgrey;
+    color: white;
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    margin: 20px;
+}
