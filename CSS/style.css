@@ -32,6 +32,32 @@ header a:link {
   text-decoration: none;
 }
 
+footer {
+  background: rgba(23, 23, 23, 0.8);
+  color: white;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-bottom: 50px;
+  margin-left: -10px;
+  margin-right: -10px;
+  line-height: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul a {
+  color: white;
+}
+ul a:link {
+  text-decoration: none;
+}
+ul a i {
+  font-size: 15px;
+  padding-right: 10px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -200,16 +226,6 @@ ol li:hover {
   text-decoration: none;
 }
 
-span {
-  padding: 5px;
-  border: 2px solid transparent;
-  background: #99E2D0;
-  color: #278870;
-  position: absolute;
-  margin-top: 15px;
-  margin-left: 250px;
-}
-
 #main_menu {
   background: #F2F2F2;
   border-top-left-radius: 40px;
@@ -298,32 +314,6 @@ span {
   text-decoration: none;
 }
 
-footer {
-  background: rgba(23, 23, 23, 0.8);
-  color: white;
-  padding-top: 10px;
-  padding-left: 40px;
-  padding-bottom: 50px;
-  margin-left: -10px;
-  margin-right: -10px;
-  line-height: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-ul a {
-  color: white;
-}
-ul a:link {
-  text-decoration: none;
-}
-ul a i {
-  font-size: 15px;
-  padding-right: 10px;
-}
-
 button {
   padding: 15px;
   border: 0 solid transparent;
@@ -332,6 +322,16 @@ button {
   color: white;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   margin: 20px;
+}
+
+span {
+  padding: 5px;
+  border: 2px solid transparent;
+  background: #99E2D0;
+  color: #278870;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 250px;
 }
 
 /*# sourceMappingURL=style.css.map */
