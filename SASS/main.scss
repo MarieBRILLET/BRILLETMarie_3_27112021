@@ -1,10 +1,10 @@
-@import './Base/standars';
-@import './Base/_typographie.scss';
+@import './Base/base';
 @import './Utils/variables';
 @import './Layout/header';
-@import './Layout/accueil';
-@import './Layout/fonctionnement';
-@import './Layout/cardaccueil';
-@import './Layout/restaurant';
 @import './Layout/footer';
-@import './Composents/button';
+@import './Page/accueil';
+@import './Page/fonctionnement';
+@import './Page/cardaccueil';
+@import './Page/restaurant';
+@import './Component/button';
+@import './Component/span';
