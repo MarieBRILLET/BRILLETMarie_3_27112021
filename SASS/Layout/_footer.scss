@@ -1,18 +1,21 @@
 footer{
     background: rgba(23,23,23,0.8);
-    color: white;
+    color: $color-quaternary;
     padding-top: 10px;
     padding-left: 40px;
     padding-bottom: 50px;
-    margin-left: -10px;
-    margin-right: -10px;
-    line-height: 20px;
+    line-height: 25px;
+    h4{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 ul{
     list-style: none;
     padding: 0;
     a{
-        color: white;
+        color: $color-quaternary;
         &:link{
             text-decoration: none;
         }
