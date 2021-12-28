@@ -1,3 +1,8 @@
+#background_img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 #main_menu{
     background: $background-main;
     border-top-left-radius: 40px;
@@ -5,14 +10,15 @@
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 80px;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-bottom: -40px;
+    position: relative;
+    bottom: 40px;
 }
 #title{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 200px;
+    padding-top: 30px;
     a{
         font-size: 25px;
         &:link{
@@ -21,52 +27,48 @@
         }
     }
 }
-.menu_title{
-    margin-bottom: 15px;
+#liste_card{
     h2{
         font-size: 20px;
         font-weight: normal;
-        margin-top: 20px;
-        margin-bottom: 8px;
+        margin-top: 30px
     }
 }
-.menu_title_line{
+hr{
     background: $color-tertiary;
-    margin: 0;
     width: 40px;
     height: 3px;
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 .bloc_menu{
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 992px){
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    @media screen and (min-width: 768px){
         flex-direction: row;
+        justify-content: space-between;
     }
 }
 .card_menu{
+    width: 340px;
+    height: 80px;
     padding: 10px;
     border-radius: 20px;
     box-shadow: 5px 2px 10px lightgrey;
     margin-bottom: 20px;
-    aside{
-        display: flex;
-        flex-direction: column;
-    }
-    h3{
-        margin: 0;
+    @media screen and (min-width: 992px){
+        width: 550px;
     }
 }
 .card_menu_text{
     display: flex;
     justify-content: space-between;
-    p{
-        margin-top: 1px;
-    }
 }
 .prix{
-    padding-left: 160px;
     font-weight: bold;
-    margin-top: 1px;
 }
 .card_menu_check a{
     visibility: hidden;
@@ -74,4 +76,9 @@
     &:link{
         text-decoration: none;
     }
+}
+#button_place{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

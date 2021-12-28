@@ -6,4 +6,13 @@ button{
     color: $color-quaternary;
     background: linear-gradient(to bottom right, $color-secondary, $color-primary);
     margin: 20px;
+    width: 180px;
+    cursor: pointer;
+    filter:brightness(1);
+    transition:filter 0.5s ease;
+}
+button:hover{
+  
+    filter:brightness(1.3);
+  
 }
