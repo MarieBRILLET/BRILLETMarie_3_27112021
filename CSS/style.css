@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -131,11 +132,22 @@ ol li {
   display: flex;
   align-items: center;
   font-weight: bold;
+  width: 335px;
   padding: 20px;
   background: #F2F2F2;
   border-radius: 20px;
   box-shadow: 5px 2px 10px lightgrey;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  ol li {
+    width: 728px;
+  }
+}
+@media screen and (min-width: 992px) {
+  ol li {
+    width: 500px;
+  }
 }
 ol li:hover {
   background: #f5edff;
@@ -243,12 +255,23 @@ ol li::before {
   align-items: center;
   padding-top: 30px;
 }
+#title h1 {
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  #title h1 {
+    font-size: 32px;
+  }
+}
 #title a {
   font-size: 25px;
 }
 #title a:link {
   text-decoration: none;
   color: grey;
+}
+#title i {
+  padding-right: 20px;
 }
 
 #liste_card h2 {
@@ -271,6 +294,9 @@ hr {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-name: slidein;
 }
 @media screen and (min-width: 768px) {
   .bloc_menu {
@@ -286,28 +312,62 @@ hr {
   border-radius: 20px;
   box-shadow: 5px 2px 10px lightgrey;
   margin-bottom: 20px;
+  position: relative;
 }
 @media screen and (min-width: 992px) {
   .card_menu {
     width: 550px;
   }
 }
+.card_menu:hover .card_menu_check {
+  width: 75px;
+}
+.card_menu:hover h3, .card_menu .card_menu_text {
+  width: calc(100% - 70px);
+}
 
 .card_menu_text {
   display: flex;
   justify-content: space-between;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width ease 0.7s;
 }
 
 .prix {
   font-weight: bold;
 }
 
+.card_menu_check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0px;
+  height: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #99E2D0;
+  transition: width ease 0.5s;
+}
+.card_menu_check:hover i {
+  visibility: visible;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-name: rotatecheck;
+}
 .card_menu_check a {
-  visibility: hidden;
   color: white;
 }
 .card_menu_check a:link {
   text-decoration: none;
+}
+.card_menu_check i {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  font-size: 20px;
+  visibility: hidden;
 }
 
 #button_place {
@@ -316,6 +376,22 @@ hr {
   align-items: center;
 }
 
+@keyframes slidein {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes rotatecheck {
+  from {
+    transition: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 button {
   padding: 15px;
   border: 0 solid transparent;
@@ -332,6 +408,19 @@ button {
 
 button:hover {
   filter: brightness(1.3);
+  box-shadow: 5px 5px 30px grey;
+}
+
+/*les 2 coeurs sont des boutons, c'est pour cela que leurs propriétés sont ici*/
+.fas.fa-heart {
+  opacity: 0;
+  position: relative;
+  left: 45px;
+  color: #9356DC;
+}
+.fas.fa-heart:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 
 span {
@@ -342,6 +431,47 @@ span {
   position: absolute;
   margin-left: 240px;
   margin-bottom: 160px;
+}
+
+#loader_container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #F2F2F2;
+  z-index: 99999;
+  visibility: hidden;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-name: display;
+}
+#loader_container i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0 auto;
+  font-size: 50px;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-name: rotate;
+}
+
+@keyframes display {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
