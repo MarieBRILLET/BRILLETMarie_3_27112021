@@ -1,0 +1,41 @@
+#loader_container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $background-main;
+    z-index: 99999;
+    visibility: hidden;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-name: display;
+    i{
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin: 0 auto;
+        font-size: 50px;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-name: rotate;
+    }
+}
+
+@keyframes display{
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

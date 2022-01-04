@@ -12,7 +12,17 @@ button{
     transition:filter 0.5s ease;
 }
 button:hover{
-  
     filter:brightness(1.3);
-  
+    box-shadow: 5px 5px 30px grey;
+}
+/*les 2 coeurs sont des boutons, c'est pour cela que leurs propriétés sont ici*/
+.fas.fa-heart{
+    opacity: 0;
+    position: relative;
+    left: 45px;
+    color: $color-primary;
+    &:hover{
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+    }
 }
