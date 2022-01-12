@@ -36,7 +36,7 @@
         padding-right: 20px;
     }
 }
-#liste_card{
+.liste_card{
     h2{
         font-size: 20px;
         font-weight: normal;
@@ -73,7 +73,7 @@ hr{
     flex-wrap: wrap;
     justify-content: space-evenly;
     animation-duration: 3s;
-    animation-timing-function: forwards;
+    animation-timing-function: ease;
     animation-name: slidein;
     position: relative;
     overflow:hidden;
