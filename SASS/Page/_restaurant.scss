@@ -73,13 +73,22 @@ hr{
     flex-wrap: wrap;
     justify-content: space-evenly;
     animation-duration: 3s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: forwards;
     animation-name: slidein;
     position: relative;
     overflow:hidden;
     cursor: pointer;
     @media screen and (min-width: 992px){
         width: 550px;
+    }
+    &:nth-child(2){
+        animation-delay: 200ms;
+    }
+    &:nth-child(3){
+        animation-delay: 400ms;
+    }
+    &:nth-child(4){
+        animation-delay: 600ms;
     }
     &:hover .card_menu_check{
         width:75px;
@@ -103,18 +112,6 @@ hr{
         overflow: visible;
         font-weight: bold;
     }
-    /*&:nth-of-type(1){
-        animation-delay: 200ms;
-    }
-    &:nth-of-type(2){
-        animation-delay: 400ms;
-    }
-    &:nth-of-type(3){
-        animation-delay: 600ms;
-    }
-    &:nth-of-type(4){
-        animation-delay: 800ms;
-    }*/
 }
 .card_menu_text{
     display: flex;
@@ -152,10 +149,14 @@ hr{
 }
 @keyframes slidein{
     from{
-        transform:translateY(20px);
+        top: 100%;
+        transform: translatey(20px);
+        opacity: 0;
     }
     to{
-        transform:translateY(0);
+        top: 0;
+        transform: translatey(0);
+        opacity: 1;
     }
 }
 @keyframes rotatecheck{
