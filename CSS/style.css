@@ -373,7 +373,7 @@ hr {
   .card_menu .prix {
     position: absolute;
     right: 10px;
-    transition: right 0.4s;
+    transition: right 0.6s;
   }
 }
 
