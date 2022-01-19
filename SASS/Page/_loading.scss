@@ -6,6 +6,7 @@
     right: 0;
     background: linear-gradient(to bottom right, $color-primary, $color-secondary, $color-tertiary);
     z-index: 99999;
+    opacity: 0;
     visibility: hidden;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -24,11 +25,17 @@
 }
 
 @keyframes display{
-    from{
-        visibility: hidden;
-    }
-    to{
+    0%{
+        opacity: 1;
         visibility: visible;
+    }
+    50%{
+        opacity: 0.5;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
     }
 }
 

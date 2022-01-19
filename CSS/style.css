@@ -276,10 +276,10 @@ ol li::before {
 }
 #title a:link {
   text-decoration: none;
-  color: grey;
 }
 #title i {
   padding-right: 20px;
+  color: grey;
 }
 
 .liste_card h2 {
@@ -318,9 +318,8 @@ hr {
   box-shadow: 5px 2px 10px lightgrey;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   animation-duration: 3s;
   animation-timing-function: ease;
   animation-name: slidein;
@@ -333,26 +332,32 @@ hr {
     width: 550px;
   }
 }
-.card_menu:nth-child(2) {
+.card_menu:nth-of-type(1) {
+  animation-delay: 0ms;
+}
+.card_menu:nth-of-type(2) {
   animation-delay: 200ms;
 }
-.card_menu:nth-child(3) {
+.card_menu:nth-of-type(3) {
   animation-delay: 400ms;
 }
-.card_menu:nth-child(4) {
+.card_menu:nth-of-type(4) {
   animation-delay: 600ms;
 }
 .card_menu:hover .card_menu_check {
-  width: 75px;
+  width: 20%;
 }
 .card_menu:hover .card_menu_text, .card_menu h3 {
-  width: calc(100% - 75px);
+  width: 80%;
 }
 .card_menu:hover i {
   visibility: visible;
-  animation-duration: 0.4s;
+  animation-duration: 0.6s;
   animation-timing-function: linear;
   animation-name: rotatecheck;
+}
+.card_menu:hover .prix {
+  right: 22%;
 }
 .card_menu h3, .card_menu p {
   text-overflow: ellipsis;
@@ -364,8 +369,16 @@ hr {
   overflow: visible;
   font-weight: bold;
 }
+@media screen and (min-width: 992px) {
+  .card_menu .prix {
+    position: absolute;
+    right: 10px;
+    transition: right 0.4s;
+  }
+}
 
 .card_menu_text {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -374,12 +387,12 @@ hr {
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
+  width: 0%;
   height: 80px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   background: #99E2D0;
-  transition: width ease 0.5s;
+  transition: width ease-in-out 0.4s;
 }
 .card_menu_check a {
   color: white;
@@ -390,9 +403,14 @@ hr {
 .card_menu_check i {
   position: relative;
   top: 25px;
-  left: 30px;
-  font-size: 20px;
+  left: 25px;
+  font-size: 25px;
   visibility: hidden;
+}
+@media screen and (min-width: 992px) {
+  .card_menu_check i {
+    left: 45px;
+  }
 }
 
 #button_place {
@@ -406,11 +424,13 @@ hr {
     top: 100%;
     transform: translatey(20px);
     opacity: 0;
+    visibility: hidden;
   }
   to {
     top: 0;
     transform: translatey(0);
     opacity: 1;
+    visibility: visible;
   }
 }
 @keyframes rotatecheck {
@@ -472,6 +492,7 @@ span {
   right: 0;
   background: linear-gradient(to bottom right, #9356DC, #FF79DA, #99E2D0);
   z-index: 99999;
+  opacity: 0;
   visibility: hidden;
   animation-duration: 2s;
   animation-timing-function: linear;
@@ -490,11 +511,17 @@ span {
 }
 
 @keyframes display {
-  from {
-    visibility: hidden;
-  }
-  to {
+  0% {
+    opacity: 1;
     visibility: visible;
+  }
+  50% {
+    opacity: 0.5;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes rotate {

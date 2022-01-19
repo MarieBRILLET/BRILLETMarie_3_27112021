@@ -29,11 +29,12 @@
         font-size: 25px;
         &:link{
             text-decoration: none;
-            color: grey;
+            
         }
     }
     i{
         padding-right: 20px;
+        color: grey;
     }
 }
 .liste_card{
@@ -69,9 +70,8 @@ hr{
     box-shadow: 5px 2px 10px lightgrey;
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     animation-duration: 3s;
     animation-timing-function: ease;
     animation-name: slidein;
@@ -81,26 +81,32 @@ hr{
     @media screen and (min-width: 992px){
         width: 550px;
     }
-    &:nth-child(2){
+    &:nth-of-type(1){
+        animation-delay: 0ms;
+    }
+    &:nth-of-type(2){
         animation-delay: 200ms;
     }
-    &:nth-child(3){
+    &:nth-of-type(3){
         animation-delay: 400ms;
     }
-    &:nth-child(4){
+    &:nth-of-type(4){
         animation-delay: 600ms;
     }
     &:hover .card_menu_check{
-        width:75px;
+        width: 20%;
     }
     &:hover .card_menu_text, h3{
-        width:calc(100% - 75px);       
+        width: 80%;       
     }
     &:hover i{
         visibility: visible;
-        animation-duration: 0.4s;
+        animation-duration: 0.6s;
         animation-timing-function: linear;
         animation-name: rotatecheck;
+    }
+    &:hover .prix{
+        right: 22%;
     }
     h3, p{
         text-overflow:ellipsis;
@@ -111,9 +117,15 @@ hr{
     .prix{
         overflow: visible;
         font-weight: bold;
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            right: 10px;
+            transition: right 0.4s;
+        }
     }
 }
 .card_menu_text{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
@@ -122,12 +134,12 @@ hr{
     position:absolute;
     top: 0;
     right: 0;
-    width: 0;
+    width: 0%;
     height: 80px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background: $color-tertiary;
-    transition: width ease 0.5s;
+    transition: width ease-in-out 0.4s;
     a{   
         color: white;
         &:link{
@@ -137,9 +149,12 @@ hr{
     i{
         position: relative;
         top: 25px;
-        left: 30px;
-        font-size: 20px;
+        left: 25px;
+        font-size: 25px;
         visibility: hidden;
+        @media screen and (min-width: 992px){
+            left: 45px;
+        }
     }
 }
 #button_place{
@@ -152,11 +167,13 @@ hr{
         top: 100%;
         transform: translatey(20px);
         opacity: 0;
+        visibility: hidden;
     }
     to{
         top: 0;
         transform: translatey(0);
         opacity: 1;
+        visibility: visible;
     }
 }
 @keyframes rotatecheck{
