@@ -344,11 +344,41 @@ hr {
 .card_menu:nth-of-type(4) {
   animation-delay: 600ms;
 }
+.card_menu h3 {
+  width: 100%;
+}
+.card_menu h3, .card_menu p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width ease 0.3s;
+}
+.card_menu:hover .card_menu_text, .card_menu:hover h3 {
+  width: 75%;
+}
+.card_menu .prix {
+  width: 10%;
+  overflow: visible;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+  transition: right linear 0.3s;
+}
+@media screen and (min-width: 992px) {
+  .card_menu .prix {
+    right: -10px;
+  }
+}
+.card_menu:hover .prix {
+  right: 22%;
+}
+@media screen and (min-width: 992px) {
+  .card_menu:hover .prix {
+    right: 16%;
+  }
+}
 .card_menu:hover .card_menu_check {
   width: 20%;
-}
-.card_menu:hover .card_menu_text, .card_menu h3 {
-  width: 80%;
 }
 .card_menu:hover i {
   visibility: visible;
@@ -356,31 +386,14 @@ hr {
   animation-timing-function: linear;
   animation-name: rotatecheck;
 }
-.card_menu:hover .prix {
-  right: 22%;
-}
-.card_menu h3, .card_menu p {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: width ease 0.7s;
-}
-.card_menu .prix {
-  overflow: visible;
-  font-weight: bold;
-}
-@media screen and (min-width: 992px) {
-  .card_menu .prix {
-    position: absolute;
-    right: 10px;
-    transition: right 0.6s;
-  }
-}
 
 .card_menu_text {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.card_menu_text p {
+  width: 90%;
 }
 
 .card_menu_check {
@@ -402,7 +415,7 @@ hr {
 }
 .card_menu_check i {
   position: relative;
-  top: 25px;
+  top: 23px;
   left: 25px;
   font-size: 25px;
   visibility: hidden;

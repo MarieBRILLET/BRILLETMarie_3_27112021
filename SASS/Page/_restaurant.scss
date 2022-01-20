@@ -93,11 +93,37 @@ hr{
     &:nth-of-type(4){
         animation-delay: 600ms;
     }
+    h3{
+        width: 100%;
+    }
+    h3, p{
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space: nowrap;
+        transition: width ease 0.3s;
+    }
+    &:hover .card_menu_text, &:hover h3{
+        width: 75%;       
+    }
+    .prix{
+        width: 10%;
+        overflow: visible;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+        transition: right linear 0.3s;
+        @media screen and (min-width: 992px){
+            right: -10px;
+        }
+    }
+    &:hover .prix{
+        right: 22%;
+        @media screen and (min-width: 992px){
+            right: 16%;
+        }
+    }
     &:hover .card_menu_check{
         width: 20%;
-    }
-    &:hover .card_menu_text, h3{
-        width: 80%;       
     }
     &:hover i{
         visibility: visible;
@@ -105,29 +131,14 @@ hr{
         animation-timing-function: linear;
         animation-name: rotatecheck;
     }
-    &:hover .prix{
-        right: 22%;
-    }
-    h3, p{
-        text-overflow:ellipsis;
-        overflow:hidden;
-        white-space: nowrap;
-        transition: width ease 0.7s;
-    }
-    .prix{
-        overflow: visible;
-        font-weight: bold;
-        @media screen and (min-width: 992px) {
-            position: absolute;
-            right: 10px;
-            transition: right 0.6s;
-        }
-    }
 }
 .card_menu_text{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    p{
+        width: 90%;
+    }
 
 }
 .card_menu_check{
@@ -148,7 +159,7 @@ hr{
     }
     i{
         position: relative;
-        top: 25px;
+        top: 23px;
         left: 25px;
         font-size: 25px;
         visibility: hidden;
